@@ -1,0 +1,219 @@
+:root {
+  font-family: system-ui, sans-serif;
+  color: #172b3a;
+  background: #f4f6f8;
+  line-height: 1.5;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+main,
+.site-header,
+footer {
+  max-width: 64rem;
+  margin-inline: auto;
+  padding: 1rem;
+}
+
+.site-header,
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-header nav {
+  display: block;
+}
+
+.nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.skip-link {
+  display: inline-block;
+  margin: 0.5rem 1rem;
+}
+
+a {
+  color: #075a94;
+}
+
+a:focus-visible {
+  outline: 3px solid #075a94;
+  outline-offset: 4px;
+}
+
+section {
+  margin-block: 1.5rem;
+}
+
+/* Сітка та картки поліклінік */
+.clinic-grid {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+  gap: 1rem;
+}
+
+.clinic-card,
+.empty-state {
+  height: 100%;
+  padding: 1rem;
+  border: 1px solid #c7d2dc;
+  border-radius: 0.5rem;
+  background: white;
+}
+
+/* Бейджі статусу чергування */
+.status {
+  font-weight: 600;
+  color: #754000;
+}
+
+.status-open,
+.status.available {
+  color: #176139;
+}
+
+.status-closed {
+  color: #b02a37;
+}
+
+/* Форми та керовані поля */
+.form-field {
+  display: grid;
+  gap: 0.375rem;
+  margin-block: 1rem;
+  max-width: 36rem;
+}
+
+.form-field label {
+  font-weight: 600;
+}
+
+.form-field input,
+.form-field textarea {
+  width: 100%;
+  padding: 0.625rem;
+  border: 1px solid #687d8d;
+  border-radius: 0.375rem;
+  font: inherit;
+}
+
+.form-field textarea {
+  resize: vertical;
+}
+
+.field-hint {
+  margin: 0;
+  color: #455b6b;
+}
+
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* Кнопки AppButton */
+.app-button {
+  padding: 0.625rem 1rem;
+  border: 1px solid #075a94;
+  border-radius: 0.375rem;
+  font: inherit;
+  cursor: pointer;
+}
+
+.app-button-primary {
+  background: #075a94;
+  color: white;
+}
+
+.app-button-secondary {
+  background: white;
+  color: #075a94;
+}
+
+.app-button:disabled {
+  opacity: 0.65;
+  cursor: default;
+}
+
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #075a94;
+  outline-offset: 3px;
+}
+
+/* Фільтри та вибір */
+.catalog-filters {
+  margin-block: 1rem;
+}
+
+.checkbox-field {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-block: 1rem;
+}
+
+.checkbox-field input {
+  width: auto;
+}
+
+.selection-note {
+  font-weight: 600;
+}
+
+button[aria-pressed="true"] {
+  outline: 2px solid #172b3a;
+  outline-offset: 3px;
+}
+.site-title { font-size: 1.5rem; font-weight: 700; text-decoration: none; }
+.nav-link { display: inline-block; padding: 0.25rem 0.5rem; text-decoration: none; }
+.nav-list a[aria-current="page"] {
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 0.25rem;
+}
+.table-scroll { overflow-x: auto; }
+.requests-table { width: 100%; border-collapse: collapse; margin-block: 1rem; }
+.requests-table th,
+.requests-table td {
+  padding: 0.625rem;
+  border: 1px solid #c7d2dc;
+  text-align: left;
+  vertical-align: top;
+}
+.requests-table caption { text-align: left; margin-block: 0.75rem; font-weight: 600; }
+.field-error { color: #9c1c24; margin: 0; font-weight: 600; font-size: 0.875rem; }
+[aria-invalid="true"] { border-color: #9c1c24; }
+.form-field select {
+  width: 100%;
+  padding: 0.625rem;
+  border: 1px solid #687d8d;
+  border-radius: 0.375rem;
+  font: inherit;
+}
+.form-field select:focus-visible { outline: 3px solid #075a94; outline-offset: 3px; }
+.operation-notice { margin-block: 1rem; }
+.operation-notice p:empty { margin: 0; }
+.requests-table td, main h1 { overflow-wrap: anywhere; }
